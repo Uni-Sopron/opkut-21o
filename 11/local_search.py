@@ -32,7 +32,7 @@ class LocalSearch():
             better_than = op.gt
         for _ in range(max_iterations):
             if self.satisfiable(s):
-                #self.print_solution(s)
+                self.print_solution(s)
                 if better_than(self.objective_value(s),
                                self.objective_value(best)):
                     best = s
@@ -40,4 +40,4 @@ class LocalSearch():
             if not next:
                 break
             s = next
-        self.print_solution(s)
+        self.print_solution(best)

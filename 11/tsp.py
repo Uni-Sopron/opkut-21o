@@ -27,7 +27,7 @@ class TSP(LocalSearch):
         best = None
         best_obj = None
         for n in self.legal_neighbors(s):
-            current_obj = self.objective_value(s)
+            current_obj = self.objective_value(n)
             if best == None or current_obj < best_obj:
                 best = n
                 best_obj = current_obj
